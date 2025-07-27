@@ -3,11 +3,16 @@
   "displayName": "Red Squiggles",
   "description": "Building my first VS Code Extension.",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nmv47786/red-squiggles.git"
+  },
+  "publisher": "nikiv",
   "engines": {
     "vscode": "^1.102.0"
   },
   "categories": [
-    "Other"
+    "Linters"
   ],
   "activationEvents": [
     "*"

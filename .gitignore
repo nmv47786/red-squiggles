@@ -1,5 +1,9 @@
-out
-dist
-node_modules
+node_modules/
+out/
+dist/
 .vscode-test/
 *.vsix
+*.log
+*.env
+*.tsbuildinfo
+package-lock.json
