@@ -9,19 +9,12 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "*"
+  ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "red-squiggles.helloWorld",
-        "title": "Hello World"
-      },
-      {
-        "command": "red-squiggles.alerting",
-        "title": "samplecmd"
-      }
-    ]
+    "commands": []
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
