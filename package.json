@@ -1,7 +1,7 @@
 {
   "name": "red-squiggles",
   "displayName": "Red Squiggles",
-  "description": "",
+  "description": "Building my first VS Code Extension.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.102.0"
@@ -16,6 +16,10 @@
       {
         "command": "red-squiggles.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "red-squiggles.alerting",
+        "title": "samplecmd"
       }
     ]
   },

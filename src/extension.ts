@@ -16,10 +16,34 @@ export function activate(context: vscode.ExtensionContext) {
 	const disposable = vscode.commands.registerCommand('red-squiggles.helloWorld', () => {
 		// The code you place here will be executed every time your command is executed
 		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from Red Squiggles!');
+		vscode.window.showInformationMessage('Hello VS Code from Red Squiggles!');
+	});
+
+
+	let alerting = vscode.commands.registerCommand('red-squiggles.alerting', () => {
+		vscode.window.showInformationMessage('Choose an option', 'A', 'B', 'C')
+		.then(selection => {
+			if (selection === 'A'){
+				for (let i = 0; i < 10; i ++) {
+					setTimeout(() => {
+						vscode.window.showErrorMessage(`ALERT ${i + 1}: You picked A`);
+					}, i * 500);
+				}
+			} else if (selection === 'B') {
+				vscode.window.showInputBox({ prompt: 'I am EV1L, Who are you' })
+				.then(output => {
+					if (output) {
+						vscode.window.showWarningMessage(`Hello ${output}`);
+					}
+				});
+			} else {
+				vscode.window.showInformationMessage('fine...');
+			}
+		});
 	});
 
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(alerting);
 }
 
 // This method is called when your extension is deactivated
