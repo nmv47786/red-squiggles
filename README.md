@@ -30,4 +30,8 @@ First release has the famous red squiggles and updating alerts.
 
 Initial early access release of Red Squiggles.
 
+## License
+
+MIT - 2025 Nikhil Vishwanath
+
 **Enjoy!**
